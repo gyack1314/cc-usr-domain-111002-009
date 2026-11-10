@@ -1,0 +1,20 @@
+{
+  "materials": [
+    {
+      "material_id": "MAT-17",
+      "path": "materials/north/report.txt",
+      "kind": "report",
+      "project": "PR-17",
+      "report_date": "2026-11-03",
+      "summary": "北区检测文本"
+    },
+    {
+      "material_id": "MAT-29",
+      "path": "materials/south/report.txt",
+      "kind": "report",
+      "project": "PR-29",
+      "report_date": "2026-11-04",
+      "summary": "南区检测文本"
+    }
+  ]
+}

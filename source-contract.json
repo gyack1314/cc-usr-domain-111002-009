@@ -1,0 +1,10 @@
+{
+  "phases": [
+    "base",
+    "delayed-precheck"
+  ],
+  "delayed-precheck": "名为hold.txt的预检等待version从1变2，可先移除再释放验证迟到结果",
+  "storage": "草稿附件保存在当前origin的localStorage",
+  "publish": "最终发布是独立页面按钮，资料接入程序不自动点击",
+  "materials": "materials下两个report.txt同名异内容"
+}
