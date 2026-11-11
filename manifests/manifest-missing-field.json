@@ -1,0 +1,15 @@
+{
+  "_comment": "故意缺字段的清单：license 类型缺少必要的 license_id，RPA 必须在上传前报错且不自动填值",
+  "draft_id": "DRAFT-17",
+  "base_dir": "..",
+  "materials": [
+    {
+      "material_id": "MAT-BAD-1",
+      "path": "materials/license/permit-license.txt",
+      "kind": "license",
+      "project": "PR-17",
+      "summary": "缺少许可编号字段的负面用例",
+      "fields": {}
+    }
+  ]
+}

@@ -22,10 +22,22 @@ python -m portal --port 8090
 
 ```sh
 python -m unittest discover -s tests -v
-python -m compileall -q portal tests
+python -m compileall -q portal tests rpa
 docker build -t upload-wizard-portal .
 docker run --rm --network none --shm-size=1g upload-wizard-portal
 ```
+
+## 资料草稿上传 RPA
+
+`rpa/` 是 Python + Playwright 的上传 RPA：凭 SHA-256 摘要与 upload_id 认领附件（不靠文件名或列表位置），文件只走浏览器 `#files` input，动态字段缺失在上传前报错，预检失败不进草稿映射，向导回退后逐项重新核对，恢复时先对账再补齐，全程不点击发布。用法与护栏见 [RPA.md](RPA.md)。
+
+```sh
+python -m rpa.cli validate --manifest manifests/manifest.json
+python -m rpa.cli run     --manifest manifests/manifest.json --portal http://127.0.0.1:8090
+python -m rpa.cli resume  --manifest manifests/manifest.json --portal http://127.0.0.1:8090
+```
+
+`tests/test_rpa.py` 是 RPA 的浏览器回归检查（input 接收、旧 upload_id 迟到不认领、重启不重复上传、发布计数始终为零等）。`manifests/` 与 `materials/` 均为公开合成内容，不含真实合规材料。
 
 Dockerfile 固定浏览器基础镜像的完整摘要，依赖版本在 requirements.txt 固定。首次构建需要下载依赖；镜像完成后，上述检查禁用外网，浏览器与门户在同一容器内通信。默认运行来源检查，不运行资料采集。
 

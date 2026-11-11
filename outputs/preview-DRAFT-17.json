@@ -1,0 +1,32 @@
+{
+  "draft_id": "DRAFT-17",
+  "attachments": [
+    {
+      "material_id": "MAT-17",
+      "project": "PR-17",
+      "kind": "report",
+      "summary": "北区检测文本",
+      "digest": "52b057478a71a00648be394ff8046964522da580c92594a1b2cba6ae4d823242",
+      "upload_id": "UP-1-1794417066284",
+      "state": "通过"
+    },
+    {
+      "material_id": "MAT-29",
+      "project": "PR-29",
+      "kind": "report",
+      "summary": "南区检测文本",
+      "digest": "dc9d1c7e87efb27cf4c91568f88bf191b6f80de6613ab5412e4ca59be269ab4a",
+      "upload_id": "UP-2-1794417067059",
+      "state": "通过"
+    },
+    {
+      "material_id": "MAT-LIC-1",
+      "project": "PR-17",
+      "kind": "license",
+      "summary": "北区虚构许可编号材料",
+      "digest": "0fb684ec584e8807049339bfcd1d90bc5a12658e55695c35134586db8e1ad951",
+      "upload_id": "UP-3-1794417068558",
+      "state": "通过"
+    }
+  ]
+}
